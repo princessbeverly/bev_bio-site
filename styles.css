@@ -24,7 +24,7 @@ body {
 }
 
 header, footer {
-    padding: 5%;
+    padding: 1%;
 }
 
 section{
@@ -39,6 +39,8 @@ section{
 
 .main_box{
     padding: 2%;
+    padding-left:10%;
+    padding-right:10%;
 
     border-style: solid;
     border-color: white;
@@ -57,7 +59,6 @@ section{
 
 .profile-section{
     margin-top: 5%;
-    margin-left: 15%;
 
     display: flex;
     flex-direction: row;
@@ -76,8 +77,7 @@ section{
 
         background-image: url('assets/prof-pic.jpg');
         background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat; }
+        background-position: center; }
 
     .user-name{
         display: flex;
@@ -98,9 +98,7 @@ section{
         .text-label{font-weight: 600;}
 
 .bio-section{
-    width: 70%;
-
-    margin-left: 15%;
+    width: 100%;
 
     line-height: 1.2;
 }
@@ -157,7 +155,6 @@ section{
     .by{font-weight: 500;}
 
 .socials{
-    margin-left: 15%;
     margin-right: 10%;
     gap: 4%;
 
@@ -183,4 +180,55 @@ section{
         border-width: 1.5px;
         border-radius: 10px;
     }
+
+.stories-section{
+    margin-right: 10%;
+    gap: 10%; 
+
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+}
     
+    .story{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story-thumbnail{
+        width: 60px;
+        height: 60px;
+
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50%;
+    }
+
+    .story-name{ font-size: 12px; font-weight: 400; justify-self: center;}
+
+.nav-sec{
+    margin-top: 5%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0;
+}
+
+.grid{
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    gap: 2px;
+}
+    .post-img{
+        height: 200px;
+        width: 1fr;
+
+        overflow: hidden;
+        border-style: solid;
+    }
