@@ -1,0 +1,166 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+
+    background-image: url('assets/6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 50;
+    color: white;
+}
+
+header, footer {
+    padding: 5%;
+}
+
+section{
+    padding-left: 30%;
+    padding-right: 30%;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    align-items: center;
+}
+
+.main_box{
+    padding: 2%;
+
+    border-style: solid;
+    border-color: white;
+    border-radius: 8px;
+    
+    background: rgba(2, 2, 2, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+.profile-section{
+    margin-top: 5%;
+    margin-left: 15%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+    gap: 50px;
+
+}
+
+    .profile-pic{
+        height: 100px;
+        width: 100px;
+        
+        border-radius: 50%;
+
+        background-image: url('assets/prof-pic.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .user-name{
+        display: flex;
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+        .stats{
+            display: flex;
+            flex-direction: row;
+
+            gap: 50px;
+            line-height: 1.5;
+
+            font-weight: 400;
+        }
+
+        .name p{ font-weight: 600; font-size: 18px;}
+        .text-label{font-weight: 600;}
+
+.bio-section{
+    width: 70%;
+
+    margin-left: 15%;
+
+    line-height: 1.2;
+}
+
+.tags{
+    padding-top: 2%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    font-weight: 100;
+    font-size: 13px;
+
+    gap: 10px;
+}
+
+    .book, .series{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-width: 0.2px; 
+        border-style: solid;
+
+        border-radius: 15px;
+        border-color: rgba(255, 253, 253, 0.36); 
+
+        width: fit-content;
+    }
+
+    .music{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 5px;
+        
+        font-weight: 100;
+        font-size: 13px;
+
+        border-width: 0.2px; 
+        border-style: solid;
+
+        border-radius: 15px;
+        border-color: rgba(255, 253, 253, 0.36); 
+
+        width: fit-content;
+    }
+    .by, .song-title{ padding-bottom: 2px;}
+    .by{
+        font-weight: 500;
+    }
+
+    
