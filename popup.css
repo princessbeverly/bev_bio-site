@@ -1,0 +1,112 @@
+
+
+@font-face {
+    font-family: 'CustomFont1';
+    src: url('assets/Rockybilly.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+dialog {
+    border: none;
+    padding: 1%;  
+    border-radius: 8px;
+}
+
+dialog[open] {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-self: center;
+    justify-self: center;
+    
+    background-color: #F6E3BA;
+    width: 300px;
+    height: 470px;
+
+    overflow: hidden;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+    .exit-button{
+        justify-self: end;
+        width: 20px;
+        height: 20px;
+        
+        border-style: none;
+        border-radius: 50%;
+        background-color: #862624;
+        color: aliceblue;
+    }
+    .exit-button:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+        border-style:none;
+    }
+    .card-upper-section{
+        display: flex;
+        justify-content: flex-start;
+        padding: 1%;
+    }
+    .vertical-text {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+
+        font-weight: 700;
+        color: #862624;
+    }
+
+    .card-pic{
+        /* position of the image */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-img{
+        /* size control for the image */
+        width: 128%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    /* Contact Info Section */
+    .card-lower-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 5%;
+        line-height: 2;
+    }
+        .c-name {
+            font-family: 'CustomFont1', sans-serif;
+            color: #862624;
+            padding-bottom: 5%;
+        }
+        .contacts{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            
+            line-height: 1.2em;
+            font-size: 14px;
+            font-weight: 500;
+
+            align-items: center;
+        }
+        .no-underline{
+            text-decoration: none;
+            color: inherit;
+        }
+        .c-label{
+            justify-self: end;
+            padding-right: 10px;
+            color: #862624;
+        }
+        .c-link{
+            color: #234651;
+        }
+
+
