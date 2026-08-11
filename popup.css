@@ -7,31 +7,77 @@
     font-style: normal;
 }
 
+/* Base Dialog Setup */
 dialog {
     border: none;
     padding: 1%;  
     border-radius: 8px;
-}
-
-dialog[open] {
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-self: center;
-    justify-self: center;
-    
     background-color: #F6E3BA;
     width: 300px;
     height: 470px;
-
     overflow: hidden;
+    margin: auto; /* Keeps centered */
+
+    /* ----------------------------------------------------
+       1. CLOSED STATE (Rotated -90deg sideways)
+       ---------------------------------------------------- */
+    transform: perspective(1000px) rotateY(-90deg) scale(0.8);
+    opacity: 0;
+
+    /* Flip Transition Timing */
+    transition: 
+        transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1), /* Smooth spring effect */
+        opacity 300ms ease,
+        display 400ms allow-discrete,
+        overlay 400ms allow-discrete;
 }
 
+/* ----------------------------------------------------
+   2. OPEN STATE (Flips straight to 0deg)
+   ---------------------------------------------------- */
+dialog[open] {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    transform: perspective(1000px) rotateY(0deg) scale(1);
+    opacity: 1;
+}
+
+/* ----------------------------------------------------
+   3. STARTING STYLE (Tells browser how to animate in)
+   ---------------------------------------------------- */
+@starting-style {
+    dialog[open] {
+        transform: perspective(1000px) rotateY(-90deg) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* ----------------------------------------------------
+   4. BACKDROP FADE
+   ---------------------------------------------------- */
 dialog::backdrop {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(4px);
+
+    opacity: 0;
+    transition: 
+        opacity 300ms ease,
+        display 300ms allow-discrete,
+        overlay 300ms allow-discrete;
 }
+
+dialog[open]::backdrop {
+    opacity: 1;
+}
+
+@starting-style {
+    dialog[open]::backdrop {
+        opacity: 0;
+    }
+}
+
     .exit-button{
         justify-self: end;
         width: 20px;
