@@ -268,8 +268,51 @@ section{
         border-style: solid;
     }
 
+@media (max-width: 1200px){
+    section { 
+        padding: 15%; 
+        margin: 0%;
+        
+    }
 
-@media (max-width: 600px){
+    .main_box { 
+        padding: 2%;
+        border-style: none; 
+        border-radius: 0;
+        background: rgba(9, 9, 9, 0.14);
+    }
+    .profile-section{
+        display: flex;
+        flex-direction: row;
+        margin-left: 7%;
+    }
+    .profile-pic { height: 120px; width: 120px;}
+    .user-name { gap: 20px;}
+    .stats { line-height: 1.3;}
+    .name p { font-size: 20px;}
+    .text-label{font-size: 13px;}
+    .bio-section {width: 85%; align-self: center;}
+    .bio-info { font-size: 15px;}
+    .tags { grid-template-columns: 1fr 1fr;}
+    .socials { margin: 0%; gap: 2%; align-self: center; width: 85%;}
+    .social-box {font-size: 12px; padding: 0%; width: 50%;}
+    .stories-section { 
+        width: 85%; 
+        align-self: center; 
+        margin: 0; 
+        gap: 10px;}
+    .grid {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .post-img {
+        height: 280px;
+        border-width: 1px;
+    }
+    
+}
+
+@media (max-width: 992px){
     section { padding: 0%; margin: 0%;}
     header, footer { display: none;}
 
@@ -281,17 +324,57 @@ section{
         background: rgba(9, 9, 9, 0.14);
     }
     .profile-section{ 
-        margin-top: 10%; 
-        gap: 8px; 
-        justify-content: space-around;
+        margin-top: 5%; 
+        gap: 8%; 
+        justify-content: center;
+        margin-right: 15%;
     }
-    .profile-pic { height: 70px; width: 70px;}
-    .user-name { gap: 0px;}
+    .profile-pic { height: 80px; width: 80px;}
+    .user-name { gap: 8px;}
     .stats { gap: 20px; line-height: 1.3;}
-    .name p { font-size: 15px;}
+    .name p { font-size: 18px;}
     .text-label{font-size: 13px;}
     .bio-section {width: 85%; align-self: center;}
-    .bio-info { font-size: 14px;}
+    .bio-info { font-size: 15px;}
+    .tags { grid-template-columns: 1fr;}
+    .socials { margin: 0%; gap: 2%; align-self: center; width: 85%;}
+    .social-box {font-size: 12px; padding: 0%; width: 50%;}
+    .stories-section { 
+        width: 85%; 
+        align-self: center; 
+        margin: 0; 
+        gap: 10px;}
+    .post-img {
+        height: 280px;
+        border-width: 1px;
+    }
+    
+}
+
+@media (max-width: 915px){
+    section { padding: 0%; margin: 0%;}
+    header, footer { display: none;}
+
+    .main_box { 
+        padding: 2%; 
+        margin: 0%; 
+        border-style: none; 
+        border-radius: 0;
+        background: rgba(9, 9, 9, 0.14);
+    }
+    .profile-section{ 
+        margin-top: 5%; 
+        gap: 8%; 
+        justify-content: center;
+        margin-right: 15%;
+    }
+    .profile-pic { height: 80px; width: 80px;}
+    .user-name { gap: 8px;}
+    .stats { gap: 20px; line-height: 1.3;}
+    .name p { font-size: 18px;}
+    .text-label{font-size: 13px;}
+    .bio-section {width: 85%; align-self: center;}
+    .bio-info { font-size: 15px;}
     .tags { grid-template-columns: 1fr;}
     .socials { margin: 0%; gap: 2%; align-self: center; width: 85%;}
     .social-box {font-size: 12px; padding: 0%; width: 50%;}
@@ -338,7 +421,7 @@ section{
     
 }
 
-@media (max-width: 915px){
+@media (max-width: 600px){
     section { padding: 0%; margin: 0%;}
     header, footer { display: none;}
 
@@ -350,18 +433,17 @@ section{
         background: rgba(9, 9, 9, 0.14);
     }
     .profile-section{ 
-        margin-top: 5%; 
-        gap: 8%; 
-        justify-content: center;
-        margin-right: 15%;
+        margin-top: 10%; 
+        gap: 8px; 
+        justify-content: space-around;
     }
-    .profile-pic { height: 80px; width: 80px;}
-    .user-name { gap: 8px;}
+    .profile-pic { height: 70px; width: 70px;}
+    .user-name { gap: 0px;}
     .stats { gap: 20px; line-height: 1.3;}
-    .name p { font-size: 18px;}
+    .name p { font-size: 15px;}
     .text-label{font-size: 13px;}
     .bio-section {width: 85%; align-self: center;}
-    .bio-info { font-size: 15px;}
+    .bio-info { font-size: 14px;}
     .tags { grid-template-columns: 1fr;}
     .socials { margin: 0%; gap: 2%; align-self: center; width: 85%;}
     .social-box {font-size: 12px; padding: 0%; width: 50%;}
@@ -370,88 +452,6 @@ section{
         align-self: center; 
         margin: 0; 
         gap: 10px;}
-    
-}
 
-@media (max-width: 992px){
-    section { padding: 0%; margin: 0%;}
-    header, footer { display: none;}
-
-    .main_box { 
-        padding: 2%; 
-        margin: 0%; 
-        border-style: none; 
-        border-radius: 0;
-        background: rgba(9, 9, 9, 0.14);
-    }
-    .profile-section{ 
-        margin-top: 5%; 
-        gap: 8%; 
-        justify-content: center;
-        margin-right: 15%;
-    }
-    .profile-pic { height: 80px; width: 80px;}
-    .user-name { gap: 8px;}
-    .stats { gap: 20px; line-height: 1.3;}
-    .name p { font-size: 18px;}
-    .text-label{font-size: 13px;}
-    .bio-section {width: 85%; align-self: center;}
-    .bio-info { font-size: 15px;}
-    .tags { grid-template-columns: 1fr;}
-    .socials { margin: 0%; gap: 2%; align-self: center; width: 85%;}
-    .social-box {font-size: 12px; padding: 0%; width: 50%;}
-    .stories-section { 
-        width: 85%; 
-        align-self: center; 
-        margin: 0; 
-        gap: 10px;}
-    .post-img {
-        height: 280px;
-        border-width: 1px;
-    }
-    
-}
-
-@media (max-width: 1200px){
-    section { 
-        padding: 15%; 
-        margin: 0%;
-        
-    }
-
-    .main_box { 
-        padding: 2%;
-        border-style: none; 
-        border-radius: 0;
-        background: rgba(9, 9, 9, 0.14);
-    }
-    .profile-section{
-        display: flex;
-        flex-direction: row;
-        margin-left: 7%;
-    }
-    .profile-pic { height: 120px; width: 120px;}
-    .user-name { gap: 20px;}
-    .stats { line-height: 1.3;}
-    .name p { font-size: 20px;}
-    .text-label{font-size: 13px;}
-    .bio-section {width: 85%; align-self: center;}
-    .bio-info { font-size: 15px;}
-    .tags { grid-template-columns: 1fr 1fr;}
-    .socials { margin: 0%; gap: 2%; align-self: center; width: 85%;}
-    .social-box {font-size: 12px; padding: 0%; width: 50%;}
-    .stories-section { 
-        width: 85%; 
-        align-self: center; 
-        margin: 0; 
-        gap: 10px;}
-    .grid {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    .post-img {
-        height: 280px;
-        border-width: 1px;
-    }
     
 }

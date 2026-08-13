@@ -174,4 +174,16 @@ dialog[open]::backdrop {
             color: #234651;
         }
 
+@media (max-width: 600px){
+    dialog[open]{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        overflow: scroll;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+    }
 
+    dialog[open]::-webkit-scrollbar {
+        display: none;
+    }
+}
