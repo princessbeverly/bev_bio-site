@@ -8,15 +8,14 @@
 }
 
 /* Base Dialog Setup */
-dialog {
+dialog { /* Keeps centered */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     border: none;
-    padding: 1%;  
-    border-radius: 8px;
-    background-color: #F6E3BA;
-    width: 300px;
-    height: 470px;
+    padding: 0;
     overflow: hidden;
-    margin: auto; /* Keeps centered */
+    margin: auto;
 
     /* ----------------------------------------------------
        1. CLOSED STATE (Rotated -90deg sideways)
@@ -37,8 +36,13 @@ dialog {
    ---------------------------------------------------- */
 dialog[open] {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2%;
+    overflow: hidden;
+    margin: auto;
+    background-color: transparent;
+    padding: 2%;
 
     transform: perspective(1000px) rotateY(0deg) scale(1);
     opacity: 1;
@@ -78,6 +82,20 @@ dialog[open]::backdrop {
     }
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: none;
+    padding: 5%;  
+    border-radius: 8px;
+    background-color: #F6E3BA;
+    width: 300px;
+    height: 480px;
+    overflow: hidden;
+    margin: auto;
+}
+
     .exit-button{
         justify-self: end;
         width: 20px;
@@ -95,7 +113,7 @@ dialog[open]::backdrop {
     .card-upper-section{
         display: flex;
         justify-content: flex-start;
-        padding: 1%;
+        padding: 3%;
     }
     .vertical-text {
         writing-mode: vertical-lr;
@@ -123,8 +141,9 @@ dialog[open]::backdrop {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding-top: 5%;
+        padding-top: 1%;
         line-height: 2;
+        padding-bottom: 5%;
     }
         .c-name {
             font-family: 'CustomFont1', sans-serif;
